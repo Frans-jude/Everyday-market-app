@@ -15,7 +15,7 @@ A modern Angular application built using standalone components. This project was
 
 > Save your screenshot in this folder:
 >
-> `screenshots/homepage.png`
+> ![Everyday Market App Screenshot](screenshots/homepage.png)
 
 ---
 
