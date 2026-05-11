@@ -1,0 +1,17 @@
+<h2>Product Page</h2>
+
+<div class="product-grid">
+  @for (product of products; track product.name) {
+    <div class="product-card" (click)="selectProduct(product)">
+      <img [src]="product.image" [alt]="product.name" />
+
+      <h3>{{ product.name }}</h3>
+      <p>${{ product.price }}</p>
+    </div>
+  }
+</div>
+
+<div class="product-details">
+  <h2>{{ selectedProduct.name }}</h2>
+  <p>{{ selectedProduct.description }}</p>
+</div>

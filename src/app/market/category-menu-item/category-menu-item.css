@@ -1,0 +1,12 @@
+li {
+  background-color: #f4f4f4;
+  border: 1px solid #999;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+li:hover {
+  background-color: #d9eaf7;
+}

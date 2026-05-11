@@ -1,0 +1,8 @@
+<ul>
+  @for (category of categories; track category.id) {
+    <app-category-menu-item
+      [categoryName]="category.categoryName"
+      (itemClicked)="onItemClicked($event)">
+    </app-category-menu-item>
+  }
+</ul>
