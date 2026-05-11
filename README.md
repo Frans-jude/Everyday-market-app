@@ -13,10 +13,6 @@ A modern Angular application built using standalone components. This project was
 
 ![Everyday Market App Screenshot](screenshots/homepage.png)
 
-> Save your screenshot in this folder:
->
-> ![Everyday Market App Screenshot](screenshots/homepage.png)
-
 ---
 
 ## Features
