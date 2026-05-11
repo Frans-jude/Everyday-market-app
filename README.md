@@ -11,7 +11,7 @@ A modern Angular application built using standalone components. This project was
 
 ## Screenshot
 
-![Everyday Market App Screenshot](screenshots/homepage.png)
+![Everyday Market App Screenshot](screenshots/Homepage.png)
 
 ---
 
