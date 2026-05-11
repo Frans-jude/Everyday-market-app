@@ -119,3 +119,8 @@ ng g interface market/model/category
 I used OpenAI Codex and ChatGPT to help debug Angular issues, understand standalone components, and implement `@Input()` and `@Output()` bindings. I reviewed and understood all submitted code before submission.
 
 ---
+
+## Author 
+**Frans jude del Castillo**
+
+---
