@@ -2,7 +2,12 @@
 
 <div class="product-grid">
   @for (product of products; track product.name) {
-    <div class="product-card" (click)="selectProduct(product)">
+    <div
+      class="product-card"
+      tabindex="0"
+      (click)="selectProduct(product)"
+      (keyup.enter)="selectProduct(product)"
+    >
       <img [src]="product.image" [alt]="product.name" />
 
       <h3>{{ product.name }}</h3>

@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrl: './category-menu-item.css'
 })
 export class CategoryMenuItem {
-  @Input() categoryName: string = '';
+  @Input() categoryName = '';
 
   @Output() itemClicked = new EventEmitter<string>();
 

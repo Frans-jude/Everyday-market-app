@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+interface Product {
+  name: string;
+  price: number;
+  image: string;
+  description: string;
+}
+
 @Component({
   selector: 'app-products-page',
   standalone: true,
@@ -9,7 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './products-page.css'
 })
 export class ProductsPage {
-  products = [
+  products: Product[] = [
     {
       name: 'Beverages',
       price: 10,
@@ -42,9 +49,9 @@ export class ProductsPage {
     }
   ];
 
-  selectedProduct = this.products[0];
+  selectedProduct: Product = this.products[0];
 
-  selectProduct(product: any) {
+  selectProduct(product: Product): void {
     this.selectedProduct = product;
   }
 }
