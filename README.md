@@ -11,7 +11,7 @@ A modern Angular application built using standalone components. This project was
 
 ## Screenshot
 
-![Everyday Market App Screenshot](screenshots/homepage.png)
+![Everyday Market App Screenshot](screenshots/Homepage.png)
 
 ---
 
@@ -115,7 +115,12 @@ ng g interface market/model/category
 ---
 
 ## AI Assistance
+I used AI tools (OpenAI Codex and ChatGPT) for guidance in debugging a few Angular issues and to better understand concepts such as `@Input()`, `@Output()`, and `@for`. All code was reviewed, tested, and understood by me before submission.
 
-I used OpenAI Codex and ChatGPT to help debug Angular issues, understand standalone components, and implement `@Input()` and `@Output()` bindings. I reviewed and understood all submitted code before submission.
+
+---
+
+## Author 
+**Frans jude del Castillo**
 
 ---
