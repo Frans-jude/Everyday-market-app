@@ -178,17 +178,32 @@ http://localhost:4200
 8. Verified successful navigation to Products page after submit
 9. Confirmed product cards display correctly
 10. Verified responsive layout and custom styling
+11. Ran `ng lint` and confirmed all files pass linting
+12. Ran `ng test --no-watch` and confirmed all tests passed successfully
 
 ### Commands Used
 
 ```bash
 ng serve
-ng test
+ng test --no-watch
 ng lint
 ng g c shared/header
 ng g c market/products-page
 ng g c market/register-page
+````
+
+### Final Testing Results
+
+* All ESLint checks passed successfully.
+* All Angular tests passed successfully.
+* Routing and navigation worked correctly.
+* Reactive form validation worked as expected.
+* Submit button remained disabled until the form became valid.
+* Navigation from Register page to Products page worked correctly.
+
 ```
+```
+
 
 ---
 
