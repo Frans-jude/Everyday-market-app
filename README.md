@@ -30,7 +30,7 @@ This updated version of the project adds:
 
 ### Products Page
 
-![Products Page](screenshots/Homepage.png)
+![Products Page](screenshots/ProductsPage.png)
 
 
 ## Features
