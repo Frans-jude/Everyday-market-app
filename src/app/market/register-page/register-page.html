@@ -1,65 +1,105 @@
-<section class="form-container">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
   <h2>Registration Form</h2>
 
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <label>Name</label>
-    <input type="text" formControlName="name" />
-    @if (f.name.touched && f.name.invalid) {
-      <small>Name must contain only letters/spaces and be at least 5 characters.</small>
-    }
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      [class.invalid]="registerForm.get('name')?.touched && registerForm.get('name')?.invalid"
+    />
+  </div>
 
-    <label>Email Address</label>
-    <input type="email" formControlName="email" />
-    @if (f.email.touched && f.email.invalid) {
-      <small>Please enter a valid email address.</small>
-    }
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      [class.invalid]="registerForm.get('email')?.touched && registerForm.get('email')?.invalid"
+    />
+  </div>
 
-    <label>Phone Number</label>
-    <input type="text" formControlName="phone" />
-    @if (f.phone.touched && f.phone.invalid) {
-      <small>Phone number must be exactly 10 digits.</small>
-    }
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input
+      id="phone"
+      type="text"
+      formControlName="phone"
+      [class.invalid]="registerForm.get('phone')?.touched && registerForm.get('phone')?.invalid"
+    />
+  </div>
 
-    <label>Date of Birth</label>
-    <input type="date" formControlName="dateOfBirth" />
-    @if (f.dateOfBirth.touched && f.dateOfBirth.invalid) {
-      <small>Date of birth is required.</small>
-    }
+  <div class="form-group">
+    <label for="dateOfBirth">Date of Birth</label>
+    <input
+      id="dateOfBirth"
+      type="date"
+      formControlName="dateOfBirth"
+      [class.invalid]="registerForm.get('dateOfBirth')?.touched && registerForm.get('dateOfBirth')?.invalid"
+    />
+  </div>
 
-    <label>Street Address</label>
-    <input type="text" formControlName="streetAddress" />
-    @if (f.streetAddress.touched && f.streetAddress.invalid) {
-      <small>Street address can only contain letters, numbers, and spaces.</small>
-    }
+  <div class="form-group">
+    <label for="streetAddress">Street Address</label>
+    <input
+      id="streetAddress"
+      type="text"
+      formControlName="streetAddress"
+      [class.invalid]="registerForm.get('streetAddress')?.touched && registerForm.get('streetAddress')?.invalid"
+    />
+  </div>
 
-    <label>Province</label>
-    <select formControlName="province">
+  <div class="form-group">
+    <label for="province">Province</label>
+    <select
+      id="province"
+      formControlName="province"
+      [class.invalid]="registerForm.get('province')?.touched && registerForm.get('province')?.invalid"
+    >
       <option value="">Select Province</option>
-      @for (province of provinces; track province) {
-        <option [value]="province">{{ province }}</option>
-      }
+      <option>Alberta</option>
+      <option>British Columbia</option>
+      <option>Manitoba</option>
+      <option>New Brunswick</option>
+      <option>Newfoundland and Labrador</option>
+      <option>Nova Scotia</option>
+      <option>Ontario</option>
+      <option>Prince Edward Island</option>
+      <option>Quebec</option>
+      <option>Saskatchewan</option>
     </select>
+  </div>
 
-    <label>Country</label>
-    <select formControlName="country">
+  <div class="form-group">
+    <label for="country">Country</label>
+    <select
+      id="country"
+      formControlName="country"
+      [class.invalid]="registerForm.get('country')?.touched && registerForm.get('country')?.invalid"
+    >
       <option value="">Select Country</option>
-      <option value="Canada">Canada</option>
-      <option value="United States">United States</option>
+      <option>Canada</option>
+      <option>United States</option>
     </select>
-    @if (f.country.touched && f.country.invalid) {
-      <small>You must select Canada to proceed.</small>
-    }
+  </div>
 
-    <label class="terms">
-      <input type="checkbox" formControlName="terms" />
-      I accept the Terms & Conditions
-    </label>
-    @if (f.terms.touched && f.terms.invalid) {
-      <small>You must accept the Terms & Conditions.</small>
-    }
+  <label class="terms" for="terms">
+    <input
+      id="terms"
+      type="checkbox"
+      formControlName="terms"
+    />
+    I accept the Terms & Conditions
+  </label>
 
-    <button type="submit" [disabled]="registerForm.invalid">
-      Submit
-    </button>
-  </form>
-</section>
+  <button
+    type="submit"
+    [disabled]="registerForm.invalid || registerForm.value.country !== 'Canada'"
+  >
+    Submit
+  </button>
+
+</form>
