@@ -209,8 +209,7 @@ ng g c market/register-page
 
 ## AI Assistance
 
-I used OpenAI Codex and ChatGPT for assistance with debugging Angular routing, reactive forms, validation logic, standalone components, and custom styling. All code was reviewed, tested, and understood before submission.
-
+I used OpenAI Codex and ChatGPT for assistance with debugging Angular routing issues, ESLint errors, reactive forms, and understanding concepts such as Angular validation, routing, and testing. All code was reviewed, tested, and understood by me before submission.
 ---
 
 ## Author
