@@ -26,7 +26,7 @@ This updated version of the project adds:
 
 ### Register Page
 
-![Register Page](screenshots/Registeration Page.png)
+![Register Page](screenshots/RegisterationPage.png)
 
 ### Products Page
 
