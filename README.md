@@ -22,6 +22,17 @@ This updated version of the project adds:
 
 ---
 
+## Screenshots 
+
+### Register Page
+
+![Register Page](screenshots/Registeration Page.png)
+
+### Products Page
+
+![Products Page](screenshots/Homepage.png)
+
+
 ## Features
 
 - Custom gradient header with logo
