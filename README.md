@@ -3,6 +3,7 @@
 ![Angular](https://img.shields.io/badge/Angular-17+-red?logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue?logo=typescript)
 ![CSS](https://img.shields.io/badge/CSS3-Styling-blue?logo=css3)
+![License](https://img.shields.io/badge/License-Educational-green)
 
 A modern Angular application built using standalone components and Angular routing. This project was created for a school assignment and demonstrates component-based architecture, reactive forms, routing, form validation, event binding, and custom styling.
 
