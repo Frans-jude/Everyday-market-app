@@ -1,29 +1,89 @@
-# Everyday Market App
+# Everyday Market App – Assignment #3 Update
 
 ![Angular](https://img.shields.io/badge/Angular-17+-red?logo=angular)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue?logo=typescript)
 ![CSS](https://img.shields.io/badge/CSS3-Styling-blue?logo=css3)
 ![License](https://img.shields.io/badge/License-Educational-green)
 
-A modern Angular application built using standalone components. This project was created for a school assignment and demonstrates component-based architecture, data binding, event binding, and custom styling.
+A modern Angular application built using standalone components and Angular routing. This project was created for a school assignment and demonstrates component-based architecture, reactive forms, routing, form validation, event binding, and custom styling.
 
 ---
 
-## Screenshot
+# Assignment #3 Update
 
-![Everyday Market App Screenshot](screenshots/Homepage.png)
+This updated version of the project adds:
+
+- Angular Routing
+- Reactive Registration Form
+- Form Validation
+- Custom Validators
+- Navigation between pages
+- Submit and Redirect functionality
 
 ---
+
+## Screenshots 
+
+### Register Page
+
+![Register Page](screenshots/RegisterationPage.png)
+
+### Products Page
+
+![Products Page](screenshots/ProductsPage.png)
+
 
 ## Features
 
 - Custom gradient header with logo
+- Navigation buttons using Angular Router
 - Product cards with images
 - Clickable product selection
 - Product description section
 - Angular standalone components
+- Reactive Registration Form
+- Custom form validation
+- Redirect to Products page after successful submit
 - Responsive layout with CSS
 - Dynamic product data rendering
+
+---
+
+## Registration Form Features
+
+The registration form includes:
+
+- Name validation
+  - Letters and spaces only
+  - Minimum 5 characters
+
+- Email validation
+  - Valid email format required
+
+- Phone number validation
+  - Must contain exactly 10 digits
+
+- Date of Birth
+  - Uses Angular date picker
+
+- Street Address validation
+  - Letters, numbers, and spaces only
+
+- Province dropdown
+  - Canadian provinces and territories
+
+- Country dropdown
+  - Canada and United States options
+  - Canada must be selected to continue
+
+- Terms & Conditions checkbox
+  - Must be accepted before submit
+
+- Submit button
+  - Disabled until the form is fully valid
+
+- Visual validation indicators
+  - Invalid touched fields display red borders
 
 ---
 
@@ -33,6 +93,8 @@ A modern Angular application built using standalone components. This project was
 - TypeScript
 - HTML5
 - CSS3
+- Angular Router
+- ReactiveFormsModule
 
 ---
 
@@ -45,19 +107,31 @@ everyday-market-app/
 │       └── images/
 │           └── logo.png
 ├── screenshots/
-│   └── homepage.png
+│   ├── homepage.png
+│   └── register-page.png
 ├── src/
 │   └── app/
 │       ├── shared/
 │       │   └── header/
 │       └── market/
 │           ├── products-page/
+│           ├── register-page/
 │           ├── category-menu/
 │           ├── category-menu-item/
 │           └── model/
 │               └── category.ts
 └── README.md
-```
+````
+
+---
+
+## Routes
+
+| Route       | Component                |
+| ----------- | ------------------------ |
+| `/register` | RegisterPage             |
+| `/products` | ProductsPage             |
+| `/`         | Redirects to `/register` |
 
 ---
 
@@ -66,7 +140,7 @@ everyday-market-app/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/everyday-market-app.git
+git clone https://github.com/Frans-jude/Everyday-market-app.git
 cd everyday-market-app
 ```
 
@@ -94,33 +168,56 @@ http://localhost:4200
 
 ### Test Steps Performed
 
-1. Ran the application using `ng serve`.
-2. Opened `http://localhost:4200`.
-3. Verified the header displays the logo and title.
-4. Confirmed all product cards are visible.
-5. Clicked each product card.
-6. Verified the selected product description updates.
+1. Ran the application using `ng serve`
+2. Verified routing between `/register` and `/products`
+3. Verified homepage redirects to `/register`
+4. Tested form validation with invalid inputs
+5. Verified red borders display on touched invalid fields
+6. Confirmed Submit button remains disabled until form is valid
+7. Verified Canada must be selected before submission
+8. Verified successful navigation to Products page after submit
+9. Confirmed product cards display correctly
+10. Verified responsive layout and custom styling
+11. Ran `ng lint` and confirmed all files pass linting
+12. Ran `ng test --no-watch` and confirmed all tests passed successfully
 
 ### Commands Used
 
 ```bash
 ng serve
+ng test --no-watch
+ng lint
 ng g c shared/header
 ng g c market/products-page
-ng g c market/category-menu
-ng g c market/category-menu-item
-ng g interface market/model/category
+ng g c market/register-page
+````
+
+### Final Testing Results
+
+* All ESLint checks passed successfully.
+* All Angular tests passed successfully.
+* Routing and navigation worked correctly.
+* Reactive form validation worked as expected.
+* Submit button remained disabled until the form became valid.
+* Navigation from Register page to Products page worked correctly.
+
 ```
+```
+
 
 ---
 
 ## AI Assistance
-I used AI tools (OpenAI Codex and ChatGPT) for guidance in debugging a few Angular issues and to better understand concepts such as `@Input()`, `@Output()`, and `@for`. All code was reviewed, tested, and understood by me before submission.
 
+I used OpenAI Codex and ChatGPT for assistance with debugging Angular routing, reactive forms, validation logic, standalone components, and custom styling. All code was reviewed, tested, and understood before submission.
+
+---
+
+## Author
+
+**Frans Jude Del Castillo**
 
 ---
 
-## Author 
-**Frans jude del Castillo**
-
----
+```
+```
